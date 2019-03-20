@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript Algorithms — Bubble Sort</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+
+    let bubbleSort = (inputArr) => {
+      let len = inputArr.length;
+      for(let i = 0; i < len; i++) { // Number of passes
+        for (let j = 0; j < len; j++) {
+
+          // Compare the adjacent positions
+          if (inputArr[j] > inputArr[j + 1]) {
+            // Swap the numbers
+            let temp = inputArr[j];
+            inputArr[j] = inputArr[j + 1];
+            inputArr[j + 1] = temp; // Replace the adjacent number with the current number
+        }
+          
+        }
+      }
+      return inputArr;
+    };
+
+    console.log(bubbleSort([1, 8, 9, 5, 4]));
+    
+    </script>
+</html>
