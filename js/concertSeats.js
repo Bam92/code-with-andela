@@ -4,7 +4,7 @@
  * @author Abel L
  */
 
-function test() {
+/*function test() {
 var ar = [
     [7, 2, 6, 2, 5, 1],
     [8, 4, 7, 3, 6, 2],
@@ -34,4 +34,59 @@ for (var i=0, len=ar.length; i<len; i++) {
     
 }}
 }
-console.log('the status is [' + test() + ']');
+console.log('the status is [' + test() + ']');*/
+
+const form = document.querySelector('form');
+//const form = forms[0];
+
+/*[form.elements].forEach((input) => {
+  console.log(input);
+});
+console.log('Number of inputs:' + form.elements.length);
+*/
+form.addEventListener("submit", function(event) {
+   
+   // variables
+   let row1 = document.getElementsByClassName('r1'),
+       row1Arr = [];
+   let row2 = document.getElementsByClassName('r2'),
+       row2Arr = [];
+   let row3 = document.getElementsByClassName('r3'),
+       row3Arr = [];
+   let row4 = document.getElementsByClassName('r4'),
+       row4Arr = [];
+   let row5 = document.getElementsByClassName('r5'),
+       row5Arr = [];
+   let row6 = document.getElementsByClassName('r6'),
+       row6Arr = [];
+   
+   // loops
+   for(let i = 0; i < row1.length; i++) {
+      row1Arr.push(row1[i].value);
+   }
+   for(let i = 0; i < row2.length; i++) {
+      row2Arr.push(row2[i].value);
+   }
+   for(let i = 0; i < row3.length; i++) {
+      row3Arr.push(row3[i].value);
+   }
+   for(let i = 0; i < row4.length; i++) {
+      row4Arr.push(row4[i].value);
+   }
+   for(let i = 0; i < row5.length; i++) {
+      row5Arr.push(row5[i].value);
+   }
+   for(let i = 0; i < row6.length; i++) {
+      row6Arr.push(row6[i].value);
+   }
+   
+   // Display
+   console.log('Line 1: [' + row1Arr + ']');
+   console.log('Line 2: [' + row2Arr + ']');
+   console.log('Line 3: [' + row3Arr + ']');
+   console.log('Line 4: [' + row4Arr + ']');
+   console.log('Line 5: [' + row5Arr + ']');
+   console.log('Line 6: [' + row6Arr + ']');
+   
+   event.preventDefault();
+});
