@@ -1,0 +1,26 @@
+body {
+   background-color: coral;
+}
+
+main { 
+   background-color: white; 
+   width: 850px;
+   /*display: flex; */
+   align-items: center; 
+   justify-content: center; 
+   /*height: 100vh;*/
+}
+
+input[type="text"] {
+   width: 30px;
+   height: 50px;
+   margin-top: 30px;
+   margin-left: 15px;
+      
+}
+
+input[type="submit"] {
+   width: 370px; 
+   background-color: coral; 
+   color: white; 
+}
