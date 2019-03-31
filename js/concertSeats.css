@@ -5,10 +5,9 @@ body {
 main { 
    background-color: white; 
    width: 850px;
-   /*display: flex; */
    align-items: center; 
    justify-content: center; 
-   /*height: 100vh;*/
+   
 }
 
 input[type="text"] {
@@ -19,8 +18,11 @@ input[type="text"] {
       
 }
 
-input[type="submit"] {
-   width: 370px; 
+input[type="submit"], input[type="reset"] {
+   width: 355px; 
    background-color: coral; 
    color: white; 
+   margin-top: 15px;
+   margin-bottom: 5px;
+   margin-left: 15px;
 }

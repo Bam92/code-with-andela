@@ -37,13 +37,7 @@ for (var i=0, len=ar.length; i<len; i++) {
 console.log('the status is [' + test() + ']');*/
 
 const form = document.querySelector('form');
-//const form = forms[0];
 
-/*[form.elements].forEach((input) => {
-  console.log(input);
-});
-console.log('Number of inputs:' + form.elements.length);
-*/
 form.addEventListener("submit", function(event) {
    
    // variables
@@ -81,6 +75,19 @@ form.addEventListener("submit", function(event) {
    }
    
    // Display
+   function appendElt(elt) {
+      let initElt = document.createElement('p');
+      initElt.appendChild(document.createTextNode('[' + elt + ']'));
+      document.getElementById('seats').appendChild(initElt);
+   }
+   
+   appendElt(row1Arr);
+   appendElt(row2Arr);
+   ppendElt(row3Arr);
+   appendElt(row4Arr);
+   ppendElt(row5Arr);
+   appendElt(row6Arr);
+   
    console.log('Line 1: [' + row1Arr + ']');
    console.log('Line 2: [' + row2Arr + ']');
    console.log('Line 3: [' + row3Arr + ']');
