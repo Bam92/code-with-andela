@@ -54,25 +54,35 @@ form.addEventListener("submit", function(event) {
    let row6 = document.getElementsByClassName('r6'),
        row6Arr = [];
    
-   // loops
+   let multidimArr = []; // array of arrays
+   
+   // loops 
+   /**
+   * @TODO: refactor: create a function
+   */
    for(let i = 0; i < row1.length; i++) {
-      row1Arr.push(row1[i].value);
+      row1Arr.push(Number(row1[i].value));
+      
    }
+   
    for(let i = 0; i < row2.length; i++) {
-      row2Arr.push(row2[i].value);
+      row2Arr.push(Number(row2[i].value));
+      
    }
    for(let i = 0; i < row3.length; i++) {
-      row3Arr.push(row3[i].value);
+      row3Arr.push(Number(row3[i].value));
    }
    for(let i = 0; i < row4.length; i++) {
-      row4Arr.push(row4[i].value);
+      row4Arr.push(Number(row4[i].value));
    }
    for(let i = 0; i < row5.length; i++) {
-      row5Arr.push(row5[i].value);
+      row5Arr.push(Number(row5[i].value));
    }
    for(let i = 0; i < row6.length; i++) {
-      row6Arr.push(row6[i].value);
+      row6Arr.push(Number(row6[i].value));
    }
+   
+   multidimArr.push(row1Arr, row2Arr, row3Arr, row4Arr, row5Arr, row6Arr);
    
    // Display
    function appendElt(elt) {
@@ -83,9 +93,9 @@ form.addEventListener("submit", function(event) {
    
    appendElt(row1Arr);
    appendElt(row2Arr);
-   ppendElt(row3Arr);
+   appendElt(row3Arr);
    appendElt(row4Arr);
-   ppendElt(row5Arr);
+   appendElt(row5Arr);
    appendElt(row6Arr);
    
    console.log('Line 1: [' + row1Arr + ']');
@@ -95,5 +105,22 @@ form.addEventListener("submit", function(event) {
    console.log('Line 5: [' + row5Arr + ']');
    console.log('Line 6: [' + row6Arr + ']');
    
+   // test
+  /* function compare(x, y) {
+      let countI = 0;
+      for(i = 0; i < x.length; i++) { 
+         countI ++;
+         let arrN = [];
+         if(y[i] > x[i]) {
+            arrN.push(y[i]);
+            
+            console.log(arrN)
+            //return true;
+         }
+         else return x[i];
+      }      
+   }*/
+   
+   console.log(multidimArr);
    event.preventDefault();
 });
