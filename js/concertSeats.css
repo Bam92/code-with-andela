@@ -4,17 +4,19 @@ body {
 
 main { 
    background-color: white; 
-   width: 850px;
-   align-items: center; 
-   justify-content: center; 
-   
+   width: 500px;
+   margin-left: 30%;
+   padding: 3%;
+   text-align: center;
 }
+
 
 input[type="text"] {
    width: 30px;
    height: 50px;
    margin-top: 30px;
    margin-left: 15px;
+   color: coral;
       
 }
 
@@ -22,7 +24,7 @@ input[type="submit"], input[type="reset"] {
    width: 355px; 
    background-color: coral; 
    color: white; 
-   margin-top: 15px;
+   margin-top: 10px;
    margin-bottom: 5px;
-   margin-left: 15px;
+   margin-left: 10px;
 }
