@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Structure in JS</title>
+</head>
+<body>
+    
+    <script>
+        function binarySearch(array, target) {
+            let left = 0;
+            let right = array.length -1;
+            let count = 0;
+
+            while(left <= right) {
+                count += 1;
+                const middle = Math.floor((left + right) / 2);
+
+                if(array[middle] === target) {
+                    return 'Found ${target} in ${count} tries.';
+                }
+
+                if(target > array[middle]) {
+                    left = middle + 1;
+                } else {
+                    right = middle -1;
+                }
+            }
+            return 'Could not find target';
+        }
+    </script>
+</body>
+</html>
