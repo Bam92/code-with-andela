@@ -28,3 +28,8 @@ input[type="submit"], input[type="reset"] {
    margin-bottom: 5px;
    margin-left: 10px;
 }
+
+.item {
+   width: 50px;
+   text-align: center;
+}
