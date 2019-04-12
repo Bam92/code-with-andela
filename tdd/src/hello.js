@@ -1,4 +1,6 @@
-function hello(name) {
-   if(name === undefined) return 'Hello, world!';
-   else return 'Hello, ' + name + '!';
+let hello = (name) => {
+   return (name === undefined) ?  'Hello, world!' : 'Hello, ' + name + '!';
 };
+
+console.log(hello());
+console.log(hello("papa"));
