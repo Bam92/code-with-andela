@@ -1,0 +1,7 @@
+/*
+ * 
+ */
+
+function divisors(integer) {
+
+}
